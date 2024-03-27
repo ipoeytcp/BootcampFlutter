@@ -14,8 +14,8 @@
 //     print("PILIHAN SALAH, SILAHKAN PILIHAN Y ATAU T");
 //   }
 // }
- 
-// SOA NO 2 
+
+// SOA NO 2
 // import 'dart:io';
 // void main() {
 // print("nama : ");
@@ -99,69 +99,72 @@ quoute = "Tetap Semangat, Apapun harimu";
 //SOAL NO 4
 
 void main() {
-const tanggal = 21;
-const bulan = 11;
-const tahun = 2023;
-var teksBulan;
-switch (true) {
-case (tanggal < 1 || tanggal > 31):
-{
-print("input tanggal salah");
-break;
-}
-case (tahun < 1900 || tahun > 2200):
-{
-print("input tahun salah");
-break;
-}
-case (bulan > 12 || bulan < 1):
-{
-print("input bulan salah");
-break;
-}
-default:
-{
-switch (true) {
-case bulan == 1:
-teksBulan = "Januari";
-break;
-case bulan == 2:
-teksBulan = "Februari";
-break;
-case bulan == 3:
-teksBulan = "Maret";
-break;
-case bulan == 4:
-teksBulan = "April";
-break;
-case bulan == 5:
-teksBulan = "Mei";
-break;
-case bulan == 6:
-teksBulan = "Juni";
-break;
-case bulan == 7:
-teksBulan = "Juli";
-break;
-case bulan == 8:
-teksBulan = "Agustus";
-break;
-case bulan == 9:
-teksBulan = "September";
-break;
-case bulan == 10:
-teksBulan = "Oktober";
-break;
-case bulan == 11:
-teksBulan = "Nopember";
-break;
-case bulan == 12:
-teksBulan = "Desember";
-break;
-default:
-break;
-} print(tanggal); print(teksBulan); print(tahun);
-break;
-}
-}
+  const tanggal = 21;
+  const bulan = 11;
+  const tahun = 2023;
+  var teksBulan;
+  switch (true) {
+    case (tanggal < 1 || tanggal > 31):
+      {
+        print("input tanggal salah");
+        break;
+      }
+    case (tahun < 1900 || tahun > 2200):
+      {
+        print("input tahun salah");
+        break;
+      }
+    case (bulan > 12 || bulan < 1):
+      {
+        print("input bulan salah");
+        break;
+      }
+    default:
+      {
+        switch (true) {
+          case bulan == 1:
+            teksBulan = "Januari";
+            break;
+          case bulan == 2:
+            teksBulan = "Februari";
+            break;
+          case bulan == 3:
+            teksBulan = "Maret";
+            break;
+          case bulan == 4:
+            teksBulan = "April";
+            break;
+          case bulan == 5:
+            teksBulan = "Mei";
+            break;
+          case bulan == 6:
+            teksBulan = "Juni";
+            break;
+          case bulan == 7:
+            teksBulan = "Juli";
+            break;
+          case bulan == 8:
+            teksBulan = "Agustus";
+            break;
+          case bulan == 9:
+            teksBulan = "September";
+            break;
+          case bulan == 10:
+            teksBulan = "Oktober";
+            break;
+          case bulan == 11:
+            teksBulan = "Nopember";
+            break;
+          case bulan == 12:
+            teksBulan = "Desember";
+            break;
+          default:
+            break;
+        }
+        print(tanggal);
+        print(teksBulan);
+        print(tahun);
+        break;
+      }
+  }
 }
