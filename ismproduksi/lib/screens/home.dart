@@ -1,6 +1,6 @@
 //import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ismproduksi/widget/history_catatan.dart';
+import 'package:ismproduksi/widgets/history_catatan.dart';
 //import 'package:flutter/widgets.dart';
 //import 'package:flutter/widgets.dart';
 import 'package:ismproduksi/widgets/menu_utama.dart';
@@ -64,7 +64,7 @@ class HomeScreen extends StatelessWidget {
                             ),
                         borderRadius: BorderRadius.circular(50),
                         border: Border.all(
-                          color: const Color(0xFF1650C0),
+                          color: const Color.fromARGB(255, 214, 215, 216),
                           style: BorderStyle.solid,
                           width: 2,
                           ),
@@ -134,7 +134,7 @@ class HomeScreen extends StatelessWidget {
              child:  Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                      Text("Catatan Terakhir", 
+                      Text("Unit Produksi", 
                       style: TextStyle(
                         fontWeight: FontWeight.bold),
                         ),
@@ -145,23 +145,23 @@ class HomeScreen extends StatelessWidget {
             imagePath: "assets/images/kpp.jpg",
             unitProduksi: "Sumur Bor Starban",
             jenisUnit: "Sumur Bor",
-            periodeCatat: "01/2024",
-            jumlahProduksi: "12.000 M3"
+            //periodeCatat: "01/2024",
+            kapasitas: "12.000 M3"
             ),
            const SizedBox(height: 15,),
            const CatatanTerakhir(
             imagePath: "assets/images/lab.jpg",
             unitProduksi: "WTP Karsa",
             jenisUnit: "WTP",
-            periodeCatat: "01/2024",
-            jumlahProduksi: "8.000 M3"
+            //periodeCatat: "01/2024",
+            kapasitas: "8.000 M3"
             ),
             const CatatanTerakhir(
             imagePath: "assets/images/ME.jpg",
             unitProduksi: "IPA Deli Tua",
             jenisUnit: "IPA",
-            periodeCatat: "01/2024",
-            jumlahProduksi: "128.000 M3"
+            //periodeCatat: "01/2024",
+            kapasitas: "128.000 M3"
             )
           ],
           
