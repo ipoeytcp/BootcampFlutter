@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ismproduksi/screens/splash.dart';
 //import 'package:ismproduksi/screens/homepage.dart';
 import 'package:ismproduksi/widgets/form_ism.dart';
 //import 'package:ismproduksi/screens/splash.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Poppins',
       ),
       debugShowCheckedModeBanner: false,
-      home: const FormIsm(),
+      home: const SplashScreen(),
     );
   }
 }
