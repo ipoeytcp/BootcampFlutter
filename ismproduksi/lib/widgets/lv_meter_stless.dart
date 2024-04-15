@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ismproduksi/screens/detail_meter.dart';
 
 class LvMeter extends StatelessWidget {
   final String imagePath;
@@ -51,23 +52,25 @@ class LvMeter extends StatelessWidget {
                             Text(
                               unitproduksi,
                               style: const TextStyle(
-                                  fontSize: 20,
+                                  fontSize: 18,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.blue),
                             ),
                             // anak 2 periode
-                            Text(periodecatat, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
+                            Text(periodecatat, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),),
                             // anak 3 liter
-                            Text(jlhproduksi, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),)
+                            Text(jlhproduksi, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),)
                           ],
                         ),
-                        
                         // anak 3 icon
                         ElevatedButton(
                             style: const ButtonStyle(
                                 backgroundColor: MaterialStatePropertyAll(
                                     Color.fromARGB(255, 125, 162, 236))),
-                            onPressed: () {},
+                            onPressed: () {Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const DetailMeter()));},
                             child: const Text(
                               "Lihat",
                               style: TextStyle(

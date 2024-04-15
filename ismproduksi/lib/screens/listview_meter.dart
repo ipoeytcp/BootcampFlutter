@@ -109,9 +109,9 @@ class _ListviewMeterState extends State<ListviewMeter> {
                                   color: Colors.blue),
                             ),
                             // anak 2 periode
-                            Text('Periode : ${hasilMapIsm.periodecatat}', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
+                            Text('Periode : ${hasilMapIsm.periodecatat}', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),),
                             // anak 3 liter
-                            Text('Produksi: ${hasilMapIsm.jlhproduksi}', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),)
+                            Text('Produksi: ${hasilMapIsm.jlhproduksi}', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),)
                           ],
                         ),
                         
@@ -121,7 +121,6 @@ class _ListviewMeterState extends State<ListviewMeter> {
                                 backgroundColor: MaterialStatePropertyAll(
                                     Color.fromARGB(255, 125, 162, 236))),
                             onPressed: () {
-                              print(hasilMapIsm.periodecatat);
                             },
                             child: const Text(
                               "Lihat",

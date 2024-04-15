@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ismproduksi/screens/home.dart';
+import 'package:ismproduksi/screens/homepage.dart';
 import 'package:ismproduksi/widgets/custom_textfields.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -82,7 +82,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const HomeScreen()));
+                              builder: (context) => const Home()));
                     },
                     child: const Text(
                       "Login",

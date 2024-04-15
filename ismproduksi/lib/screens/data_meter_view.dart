@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 class DataMeterView extends StatefulWidget {
   final String? title;
   const DataMeterView({
-    Key? key,
+    super.key,
     this.title
-  }) : super(key: key);
+  });
 
   @override
   State<DataMeterView> createState() => _DataMeterViewState();

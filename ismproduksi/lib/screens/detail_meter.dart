@@ -1,36 +1,34 @@
-// ignore_for_file: unused_local_variable
-
 import 'package:flutter/material.dart';
-import 'package:ismproduksi/widgets/lv_meter_stless.dart';
 import 'package:ismproduksi/widgets/text_detail.dart';
 
-class DetailPage extends StatefulWidget {
-  const DetailPage({super.key});
+class DetailMeter extends StatefulWidget {
+  const DetailMeter({super.key});
 
   @override
-  State<DetailPage> createState() => _DetailPageState();
+  State<DetailMeter> createState() => _DetailMeterState();
 }
 
-class _DetailPageState extends State<DetailPage> {
-   int? selectedIndex;
+class _DetailMeterState extends State<DetailMeter> {
+int? selectedIndex;
 
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
+    // ignore: unused_local_variable
     double width = MediaQuery.of(context).size.width;
     return Scaffold(
       //widget bottom navigation bar
-       //bottomNavigationBar: BottomNavigationBar(items: const [
-        //BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-        //BottomNavigationBarItem(icon: Icon(Icons.bookmark), label: "Tersimpan"),
-        //BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profil"),
-        //],),
+      //  bottomNavigationBar: BottomNavigationBar(items: const [
+      //   BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+      //   BottomNavigationBarItem(icon: Icon(Icons.bookmark), label: "Tersimpan"),
+      //   BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profil"),
+      //   ],),
       appBar: AppBar(
         //widget appbar
         backgroundColor: const Color(0xFF1650C0),
         automaticallyImplyLeading: false,
         title: const Text(
-          "Detail Unit Produksi",
+          "Detail ISM",
           style: TextStyle(color: Colors.white),
         ),
       ),
@@ -50,7 +48,8 @@ class _DetailPageState extends State<DetailPage> {
                     decoration: const BoxDecoration(
                         image: DecorationImage(
                             fit: BoxFit.cover,
-                            image: AssetImage("assets/images/kpp.jpg"))),
+                            image: AssetImage(
+                                "assets/images/meter/meter01.jpeg"))),
                   ),
                   Positioned(
                     //widget tanda panah atas
@@ -115,13 +114,16 @@ class _DetailPageState extends State<DetailPage> {
                     Row(
                       children: [
                         Icon(
-                          Icons.holiday_village,
+                          Icons.calendar_month,
                           color: Colors.blue,
                         ),
                         SizedBox(
                           width: 5,
                         ),
-                        Text("Sumur Bor")
+                        Text(
+                          "01/2023",
+                          style: TextStyle(fontSize: 16),
+                        )
                       ],
                     ),
                     Row(
@@ -129,13 +131,16 @@ class _DetailPageState extends State<DetailPage> {
                         Row(
                           children: [
                             Icon(
-                              Icons.add_task_rounded,
+                              Icons.output,
                               color: Colors.green,
                             ),
                             SizedBox(
                               width: 5,
                             ),
-                            Text("Kapasitas 40 L/S")
+                            Text(
+                              "Produksi : 10.000 M3",
+                              style: TextStyle(fontSize: 16),
+                            )
                           ],
                         )
                       ],
@@ -144,34 +149,44 @@ class _DetailPageState extends State<DetailPage> {
                 ),
               ),
               //card info
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Card(
-                  color: const Color.fromARGB(255, 115, 213, 252),
+                  color: Color.fromARGB(255, 115, 213, 252),
                   child: Padding(
-                    padding: const EdgeInsets.all(16.0),
+                    padding: EdgeInsets.all(16.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const Column(
+                        Column(
                           children: [
                             Text(
-                              "Jadwal Catat Bulan Ini :",
+                              "Tanggal Input :",
                               style: TextStyle(
-                                  fontSize: 14, fontWeight: FontWeight.bold),
+                                  fontSize: 16, fontWeight: FontWeight.bold),
                             ),
-                            Text("26 Februari 2024")
+                            Text(
+                              "2 Januari 2023",
+                              style: TextStyle(fontSize: 16),
+                            )
                           ],
                         ),
-                        ElevatedButton(
-                            style: const ButtonStyle(
-                                backgroundColor: MaterialStatePropertyAll(
-                                    Color(0xFF1650C0))),
-                            onPressed: () {},
-                            child: const Text(
-                              "Catat",
-                              style: TextStyle(color: Colors.white),
-                            ))
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Icon(
+                              Icons.free_cancellation,
+                              color: Colors.red,
+                            ),
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Text(
+                              "Lewat Waktu Catat",
+                              style: TextStyle(fontSize: 16, color: Colors.red),
+                            )
+                          ],
+                        )
                       ],
                     ),
                   ),
@@ -184,71 +199,38 @@ class _DetailPageState extends State<DetailPage> {
                 detail: "01.SB.001",
               ),
               const TextDetail(
+                title: "Jenis Unit Produksi",
+                detail: "Sumur Bor",
+              ),
+              const TextDetail(
                 title: "Alamat",
                 detail: "Jl. Starban Polonia No. 01",
               ),
               const TextDetail(
+                title: "Penanggung Jawab",
+                detail: "Syaiful hadi",
+              ),
+              const TextDetail(
+                title: "Pilihan Catat",
+                detail: "Normal",
+              ),
+              const TextDetail(
+                title: "Stand Awal (Ltr)",
+                detail: "110.000.000",
+              ),
+              const TextDetail(
+                title: "Stand Akhir (Ltr)",
+                detail: "120.000.000",
+              ),
+              const TextDetail(
+                title: "Jumlah Produksi (Ltr)" ,
+                detail: "10.000.000",
+              ),
+              
+              const TextDetail(
                 title: "Keterangan",
                 detail:
                     "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
-              ),
-
-              //Judul Listview history
-              const Padding(
-                padding: EdgeInsets.all(17),
-                child: Text(
-                  "Data Catatan",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
-                ),
-              ),
-
-              //List View Data Catatan meter
-              const Padding(
-                padding: EdgeInsets.all(16.0),
-                child: Column(
-                  children: [
-                    LvMeter(
-                        imagePath: "assets/images/meter/meter01.jpeg",
-                        unitproduksi: "SB Starban",
-                        periodecatat: "01/2023",
-                        jlhproduksi: "10.000 M3"),
-                    LvMeter(
-                        imagePath: "assets/images/meter/meter02.jpeg",
-                        unitproduksi: "SB Starban",
-                        periodecatat: "02/2023",
-                        jlhproduksi: "10.000 M3"),
-                    LvMeter(
-                        imagePath: "assets/images/meter/meter03.jpg",
-                        unitproduksi: "SB Starban",
-                        periodecatat: "03/2023",
-                        jlhproduksi: "10.000 M3"),
-                    LvMeter(
-                        imagePath: "assets/images/meter/meter04.jpeg",
-                        unitproduksi: "SB Starban",
-                        periodecatat: "04/2023",
-                        jlhproduksi: "10.000 M3"),
-                    LvMeter(
-                        imagePath: "assets/images/meter/meter05.jpeg",
-                        unitproduksi: "SB Starban",
-                        periodecatat: "05/2023",
-                        jlhproduksi: "10.000 M3"),
-                    LvMeter(
-                        imagePath: "assets/images/meter/meter06.jpg",
-                        unitproduksi: "SB Starban",
-                        periodecatat: "06/2023",
-                        jlhproduksi: "10.000 M3"),
-                    LvMeter(
-                        imagePath: "assets/images/meter/meter07.jpeg",
-                        unitproduksi: "SB Starban",
-                        periodecatat: "07/2023",
-                        jlhproduksi: "10.000 M3"),
-                    LvMeter(
-                        imagePath: "assets/images/meter/meter08.jpeg",
-                        unitproduksi: "SB Starban",
-                        periodecatat: "08/2023",
-                        jlhproduksi: "10.000 M3"),
-                  ],
-                ),
               ),
             ],
           ),
@@ -256,10 +238,9 @@ class _DetailPageState extends State<DetailPage> {
       ),
     );
   }
-onItemSelected(index) {
+  onItemSelected(index) {
     setState(() {
       selectedIndex = index;
     });
   }
-  
 }

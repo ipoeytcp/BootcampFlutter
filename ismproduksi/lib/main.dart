@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:ismproduksi/screens/detail_page.dart';
-import 'package:ismproduksi/screens/home.dart';
-import 'package:ismproduksi/screens/splash.dart';
-import 'package:ismproduksi/widgets/lv_meter_stless.dart';
-//import 'package:ismproduksi/screens/home.dart';
-//import 'package:ismproduksi/screens/listview_meter.dart';
-//import 'package:ismproduksi/screens/detail_page.dart';
+//import 'package:ismproduksi/screens/homepage.dart';
+import 'package:ismproduksi/widgets/form_ism.dart';
 //import 'package:ismproduksi/screens/splash.dart';
-//import 'package:ismproduksi/widgets/data_catatan.dart';
+//import 'package:ismproduksi/widgets/bottomnavigasi.dart';
+import 'package:image_picker/image_picker.dart';
+
+
 
 void main() {
   runApp(const MyApp());
@@ -27,7 +25,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Poppins',
       ),
       debugShowCheckedModeBanner: false,
-      home: const SplashScreen(),
+      home: const FormIsm(),
     );
   }
 }

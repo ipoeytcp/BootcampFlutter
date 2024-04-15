@@ -32,7 +32,7 @@ class _DataISMState extends State<DataISM> {
                   ),
                 ),
                 onTap: (){
-                  print("listName ${listName[position].toString()}");
+                  //print("listName ${listName[position].toString()}");
                   Navigator.push(
                     context, 
                     MaterialPageRoute(
