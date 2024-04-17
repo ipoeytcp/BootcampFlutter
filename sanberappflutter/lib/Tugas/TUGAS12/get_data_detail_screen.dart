@@ -26,12 +26,12 @@ class _GetDetailDataScreenState extends State<GetDetailDataScreen> {
   @override
   void initState() {
     var url = 'https://reqres.in/api/users/${value.toString()}';
-    _getRefreshData(url);
+    _getRefreshDaata(url);
     super.initState();
     print('Cek parameter +${value}');
   }
 
-  Future<void> _getRefreshData(url) async {
+  Future<void> _getRefreshDaata(url) async {
     getJsonData(context, url);
   }
 
