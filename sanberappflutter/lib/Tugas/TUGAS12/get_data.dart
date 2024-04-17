@@ -1,7 +1,6 @@
-import 'dart:async';
 import 'dart:convert';
-//import 'dart:html';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import 'package:sanberappflutter/Tugas/TUGAS12/get_data_detail_screen.dart';
 
 class GetDataScreen extends StatefulWidget {
@@ -14,8 +13,6 @@ class GetDataScreen extends StatefulWidget {
 class _GetDataScreenState extends State<GetDataScreen> {
   final String url = "https://reqres.in/api/users?page=2";
   List? data;
-
-  get http => null;
   @override
   void initState() {
     _getRefreshDaata();
@@ -28,13 +25,15 @@ class _GetDataScreenState extends State<GetDataScreen> {
 
   Future<void> getJsonData(BuildContext context) async {
     var response =
-          await http.get(Uri.parse(url), headers: {"Accept": "aplication/json"});
+        await http.get(Uri.parse(url), headers: {"Accept": "aplication/json"});
+    print(response.body);
     setState(() {
       var convertDataToJson = jsonDecode(response.body);
       data = convertDataToJson['data'];
     });
   }
 
+@override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -48,7 +47,7 @@ class _GetDataScreenState extends State<GetDataScreen> {
                 itemCount: data == null ? 0 : data!.length,
                 itemBuilder: (BuildContext context, int index) {
                   return Container(
-                    padding: EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(5),
                     child: Column(
                       children: [
                         GestureDetector(
@@ -62,7 +61,7 @@ class _GetDataScreenState extends State<GetDataScreen> {
                             print(data![index]["id"]);
                           },
                           child: Padding(
-                            padding: EdgeInsets.all(16),
+                            padding: const EdgeInsets.all(16),
                             child: Row(
                               children: [
                                 ClipRRect(
@@ -72,9 +71,7 @@ class _GetDataScreenState extends State<GetDataScreen> {
                                     width: 80,
                                   ),
                                 ),
-                                SizedBox(
-                                  width: 10,
-                                ),
+                                const SizedBox(width: 10,),
                                 Column(
                                   children: [
                                     Text(data![index]["first_name"] +
@@ -87,12 +84,10 @@ class _GetDataScreenState extends State<GetDataScreen> {
                             ),
                           ),
                         ),
-                        Divider()
+                        const Divider()
                       ],
                     ),
                   );
-                }),
-      ),
-    );
+                })));
   }
 }
