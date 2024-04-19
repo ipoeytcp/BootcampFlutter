@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "868839960298",
+    "project_id": "latihanauth-eb016",
+    "storage_bucket": "latihanauth-eb016.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:868839960298:android:19204c4ac9987f898f7193",
+        "android_client_info": {
+          "package_name": "com.example.autentikasiproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxMi1MTY6z2cEuGdR4L7IT5qqmq4pyH9U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
